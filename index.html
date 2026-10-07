@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovanne Bruno | Psicólogo & Palestrante</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <!-- Tailwind CSS para Estilização Fiel ao Design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS CSS para Animações de Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0F172A',
+                        darkerBg: '#0B0F19',
+                        brandBlue: '#3B82F6',
+                        brandLight: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+        
+        .hero-gradient { background: linear-gradient(135deg, #0B0F19 0%, #0F172A 100%); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    </style>
+</head>
+<body class="bg-brandLight text-gray-800 antialiased overflow-x-hidden selection:bg-brandBlue selection:text-white">
+
+    <!-- Header / Menu de Navegação -->
+    <header class="fixed w-full bg-darkerBg/95 backdrop-blur-sm z-50 border-b border-gray-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#inicio">
+                        <!-- Asset 13 -->
+                        <img src="logo.png" alt="Geovanne Bruno Logo" class="h-10 w-auto" onerror="this.outerHTML='<span class=\'text-white font-bold text-xl tracking-wider\'>GB.</span>'">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide uppercase">Início</a>
+                    <a href="#quem-sou-eu" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide uppercase">Quem sou eu</a>
+                    <a href="#experiencia" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide uppercase">Experiência</a>
+                    <a href="#servicos" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide uppercase">Serviços</a>
+                    <a href="#contatos" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide uppercase">Contatos</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Início Section -->
+    <section id="inicio" class="hero-gradient pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brandBlue opacity-20 blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Eu te ajudo a abandonar os vícios e se tornar um <span class="text-brandBlue">homem melhor.</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-10 max-w-2xl">
+                        Psicologia, empatia e estratégias práticas para ressignificar a sua vida.
+                    </p>
+                    <a href="https://wa.me/5534991232294" target="_blank" class="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/30">
+                        <!-- Asset 10 -->
+                        <img src="wpicon.png" alt="WhatsApp" class="w-6 h-6 mr-3" onerror="this.style.display='none'">
+                        ME CHAME AQUI
+                    </a>
+                </div>
+                <div class="mt-16 lg:mt-0 lg:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <!-- Asset 1 -->
+                    <img src="profile1.png" alt="Geovanne Bruno" class="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl object-cover" onerror="this.outerHTML='<div class=\'w-full max-w-lg mx-auto h-96 bg-gray-800 rounded-2xl flex items-center justify-center text-gray-500\'>[Imagem: profile1.png]</div>'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Sou Eu Section -->
+    <section id="quem-sou-eu" class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-sm font-bold text-brandBlue tracking-widest uppercase mb-2">Sobre mim</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">QUEM SOU EU</h3>
+            <div class="text-lg text-gray-600 leading-relaxed space-y-6">
+                <p>
+                    Prazer em conhecê-lo(a)! Meu nome é Geovanne, sou psicólogo e comunicador nato. Desde criança busco ajudar as pessoas a resolverem seus problemas através da escuta ativa e empatia que sempre me guiaram.
+                </p>
+                <p>
+                    Meu objetivo é ajudar as pessoas que sofrem com dependência digital, ressignificando suas vidas, tratando os comportamentos e crenças utilizando a abordagem TCC.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="py-24 bg-darkBg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-brandBlue tracking-widest uppercase mb-2">Confira as fotos dos eventos passados</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold">GALERIA</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Assets 2, 3, 4 -->
+                <div class="rounded-xl overflow-hidden group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="photo1.png" alt="Galeria 1" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.outerHTML='<div class=\'w-full h-64 bg-gray-800 flex items-center justify-center text-gray-500\'>[photo1.png]</div>'">
+                </div>
+                <div class="rounded-xl overflow-hidden group cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="photo2.png" alt="Galeria 2" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.outerHTML='<div class=\'w-full h-64 bg-gray-800 flex items-center justify-center text-gray-500\'>[photo2.png]</div>'">
+                </div>
+                <div class="rounded-xl overflow-hidden group cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="photo3.png" alt="Galeria 3" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" onerror="this.outerHTML='<div class=\'w-full h-64 bg-gray-800 flex items-center justify-center text-gray-500\'>[photo3.png]</div>'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Section -->
+    <section id="experiencia" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">EXPERIÊNCIA</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Assets 5, 6, 7, 8 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-brandBlue/10 rounded-xl flex items-center justify-center mb-6">
+                        <img src="icon1.png" alt="Vendedor" class="w-8 h-8" onerror="this.outerHTML='<span class=\'text-brandBlue font-bold\'>V</span>'">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">VENDEDOR</h4>
+                    <p class="text-gray-600">Mais de 10 anos na área de vendas outbound e inbound.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-brandBlue/10 rounded-xl flex items-center justify-center mb-6">
+                        <img src="icon2.png" alt="Desenvolvedor" class="w-8 h-8" onerror="this.outerHTML='<span class=\'text-brandBlue font-bold\'>D</span>'">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">DESENVOLVEDOR</h4>
+                    <p class="text-gray-600">Perito em tecnologia, com foco em saúde mental.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-brandBlue/10 rounded-xl flex items-center justify-center mb-6">
+                        <img src="icon3.png" alt="Psicologia" class="w-8 h-8" onerror="this.outerHTML='<span class=\'text-brandBlue font-bold\'>P</span>'">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">PSICOLOGIA</h4>
+                    <p class="text-gray-600">Psicólogo TCC com foco em neuroplasticidade.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-brandBlue/10 rounded-xl flex items-center justify-center mb-6">
+                        <img src="icon4.png" alt="Escritor" class="w-8 h-8" onerror="this.outerHTML='<span class=\'text-brandBlue font-bold\'>E</span>'">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">ESCRITOR</h4>
+                    <p class="text-gray-600">Escreveu o livro de auto ajuda "As 7 Certezas".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-24 bg-darkBg text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-brandBlue tracking-widest uppercase mb-2">Escolha a sua categoria</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold">SERVIÇOS</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div class="bg-darkerBg rounded-3xl p-10 text-center border border-gray-800 card-hover transition-all relative overflow-hidden group" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-brandBlue opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                    <h4 class="text-2xl font-bold mb-4">PARA ESCOLAS</h4>
+                    <p class="text-gray-400 mb-8 min-h-[60px]">Palestra com foco em vícios em redes sociais.</p>
+                    <a href="escolas.html" class="inline-flex items-center justify-center px-6 py-3 bg-brandBlue hover:bg-blue-600 text-white font-semibold rounded-full transition-colors w-full">
+                        <!-- Asset 9 -->
+                        <img src="icon5.png" alt="Saiba Mais" class="w-5 h-5 mr-2" onerror="this.style.display='none'">
+                        SAIBA MAIS
+                    </a>
+                </div>
+                <div class="bg-darkerBg rounded-3xl p-10 text-center border border-gray-800 card-hover transition-all relative overflow-hidden group" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-brandBlue opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                    <h4 class="text-2xl font-bold mb-4">PARA EMPRESAS</h4>
+                    <p class="text-gray-400 mb-8 min-h-[60px]">Palestra com foco em vendas e negócios.</p>
+                    <a href="empresas.html" class="inline-flex items-center justify-center px-6 py-3 bg-brandBlue hover:bg-blue-600 text-white font-semibold rounded-full transition-colors w-full">
+                        <!-- Asset 9 -->
+                        <img src="icon5.png" alt="Saiba Mais" class="w-5 h-5 mr-2" onerror="this.style.display='none'">
+                        SAIBA MAIS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatos Section -->
+    <section id="contatos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-brandBlue tracking-widest uppercase mb-2">Agende uma reunião</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">CONTATOS</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <a href="https://wa.me/5534991232294" target="_blank" class="flex flex-col items-center p-8 bg-gray-50 rounded-2xl hover:bg-green-50 transition-colors card-hover border border-gray-100" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600">
+                        <!-- Asset 10 -->
+                        <img src="wpicon.png" alt="WhatsApp" class="w-8 h-8" onerror="this.outerHTML='<span class=\'font-bold\'>W</span>'">
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">WhatsApp</h4>
+                    <p class="text-gray-600 text-center">(34) 99123-2294</p>
+                </a>
+                <a href="mailto:contato@gebruno.com.br" class="flex flex-col items-center p-8 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors card-hover border border-gray-100" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-brandBlue">
+                        <!-- Asset 11 -->
+                        <img src="email.png" alt="Email" class="w-8 h-8" onerror="this.outerHTML='<span class=\'font-bold\'>@</span>'">
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">E-mail</h4>
+                    <p class="text-gray-600 text-center">contato@gebruno.com.br</p>
+                </a>
+                <a href="https://instagram.com/eu.gebruno" target="_blank" class="flex flex-col items-center p-8 bg-gray-50 rounded-2xl hover:bg-pink-50 transition-colors card-hover border border-gray-100" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4 text-pink-600">
+                        <!-- Asset 12 -->
+                        <img src="instagram.png" alt="Instagram" class="w-8 h-8" onerror="this.outerHTML='<span class=\'font-bold\'>IG</span>'">
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Instagram</h4>
+                    <p class="text-gray-600 text-center">@eu.gebruno</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkerBg text-gray-500 py-8 border-t border-gray-800 text-center">
+        <p>&copy; 2026 Geovanne Bruno. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicialização do Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-in-out-cubic',
+        });
+    </script>
+</body>
+</html>
