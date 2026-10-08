@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Escolas - Método Zenkai | Geovanne Bruno</title>
+    <link rel="icon" href="favicon.png?v=2" type="image/png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0F172A',
+                        darkerBg: '#0B0F19',
+                        brandBlue: '#3B82F6',
+                        brandLight: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+        
+        .hero-gradient { background: linear-gradient(135deg, #0B0F19 0%, #0F172A 100%); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    </style>
+</head>
+<body class="bg-brandLight text-gray-800 antialiased overflow-x-hidden selection:bg-brandBlue selection:text-white">
+
+    <!-- Header / Voltar -->
+    <header class="fixed w-full bg-darkerBg/95 backdrop-blur-sm z-50 border-b border-gray-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html#servicos" class="inline-flex items-center text-gray-300 hover:text-white transition-colors text-sm font-bold tracking-wide uppercase group">
+                    <!-- Asset 1: seta.png -->
+                    <img src="seta.png" alt="Voltar" class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" onerror="this.outerHTML='<span class=\'mr-2\'>&larr;</span>'">
+                    VOLTAR
+                </a>
+                <span class="text-white font-bold text-lg tracking-wider">PARA ESCOLAS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden text-center text-white">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brandBlue opacity-20 blur-3xl"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                PARA <span class="text-brandBlue">ESCOLAS</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Desenvolvi uma palestra exclusiva para estudantes do ensino médio, com foco em saúde mental e redes sociais. Preparei um conteúdo prático, com minha própria metodologia.[cite: 5]
+            </p>
+        </div>
+    </section>
+
+    <!-- Método Zenkai Section -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brandBlue mb-3">MÉTODO ZENKAI</h2>
+                <p class="text-lg text-gray-600">Conheça o método que está mudando os alunos para melhor!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Card 1 (Asset 2: icone1es.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm card-hover transition-all flex items-start space-x-5" data-aos="fade-right" data-aos-delay="100">
+                    <div class="p-3 bg-blue-100 rounded-xl flex-shrink-0">
+                        <img src="icone1es.png" alt="Evolução" class="w-10 h-10 object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-brandBlue\'>📈</span>'">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">EVOLUÇÃO</h3>
+                        <p class="text-gray-600">Evolução constante todos os dias, com hábitos saudáveis.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Asset 3: icone2es.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm card-hover transition-all flex items-start space-x-5" data-aos="fade-left" data-aos-delay="200">
+                    <div class="p-3 bg-blue-100 rounded-xl flex-shrink-0">
+                        <img src="icone2es.png" alt="Autocuidado" class="w-10 h-10 object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-brandBlue\'>💙</span>'">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">AUTOCUIDADO</h3>
+                        <p class="text-gray-600">Fazer a manutenção na saúde mental frequentemente.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 (Asset 4: icone3es.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm card-hover transition-all flex items-start space-x-5" data-aos="fade-right" data-aos-delay="300">
+                    <div class="p-3 bg-blue-100 rounded-xl flex-shrink-0">
+                        <img src="icone3es.png" alt="Transparência" class="w-10 h-10 object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-brandBlue\'>🤝</span>'">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">TRANSPARÊNCIA</h3>
+                        <p class="text-gray-600">Ser sincero em todas as atitudes, evitando conflitos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Asset 5: icone4es.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm card-hover transition-all flex items-start space-x-5" data-aos="fade-left" data-aos-delay="400">
+                    <div class="p-3 bg-blue-100 rounded-xl flex-shrink-0">
+                        <img src="icone4es.png" alt="Aprendizagem" class="w-10 h-10 object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-brandBlue\'>💡</span>'">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">APRENDIZAGEM</h3>
+                        <p class="text-gray-600">Aprendizagem significativa através de um conteúdo dinâmico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Escolas Section -->
+    <section class="py-20 bg-darkBg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-3">ESCOLAS</h2>
+                <p class="text-gray-400">Conheça as escolas que já investiram.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+                <!-- Asset 6: escola1.png -->
+                <div class="bg-darkerBg p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-center card-hover transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="escola1.png" alt="Colégio Opção" class="max-h-24 w-auto object-contain" onerror="this.outerHTML='<div class=\'text-xl font-bold text-gray-300 py-6\'>COLÉGIO OPÇÃO</div>'">
+                </div>
+                <!-- Asset 7: escola2.png -->
+                <div class="bg-darkerBg p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-center card-hover transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="escola2.png" alt="Colégio Objetivo" class="max-h-24 w-auto object-contain" onerror="this.outerHTML='<div class=\'text-xl font-bold text-gray-300 py-6\'>COLÉGIO OBJETIVO</div>'">
+                </div>
+                <!-- Asset 8: escola3.png -->
+                <div class="bg-darkerBg p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-center card-hover transition-all" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="escola3.png" alt="Colégio Apolo" class="max-h-24 w-auto object-contain" onerror="this.outerHTML='<div class=\'text-xl font-bold text-gray-300 py-6\'>COLÉGIO APOLO</div>'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pacotes Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">PACOTES</h2>
+                <p class="text-gray-600">Escolha a melhor oferta!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- BÁSICO -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 text-center mb-6">BÁSICO</h3>
+                        <ul class="space-y-4 text-gray-600 mb-8">
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> 2h de palestra</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Plantão de dúvidas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900 text-center mb-6">R$ 800,00</div>
+                        <a href="https://wa.me/5534991232294?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20pacote%20B%C3%A1sico%20para%20Escolas." target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 bg-brandBlue hover:bg-blue-600 text-white font-bold rounded-full transition-colors">
+                            <!-- Asset 9: wpicon.png -->
+                            <img src="wpicon.png" alt="WhatsApp" class="w-5 h-5 mr-2" onerror="this.style.display='none'">
+                            CONTRATAR
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AVANÇADO -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-brandBlue shadow-lg flex flex-col justify-between card-hover transition-all relative transform lg:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brandBlue text-white text-xs font-bold uppercase py-1 px-4 rounded-full">Destaque</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 text-center mb-6">AVANÇADO</h3>
+                        <ul class="space-y-4 text-gray-600 mb-8">
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> 2h de palestra</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Plantão de dúvidas</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Abertura com música</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Kahoot</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900 text-center mb-6">R$ 1.600,00</div>
+                        <a href="https://wa.me/5534991232294?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20pacote%20Avan%C3%A7ado%20para%20Escolas." target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 bg-brandBlue hover:bg-blue-600 text-white font-bold rounded-full transition-colors">
+                            <!-- Asset 9: wpicon.png -->
+                            <img src="wpicon.png" alt="WhatsApp" class="w-5 h-5 mr-2" onerror="this.style.display='none'">
+                            CONTRATAR
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PREMIUM -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 text-center mb-6">PREMIUM</h3>
+                        <ul class="space-y-4 text-gray-600 mb-8">
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> 2h de palestra</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Plantão de dúvidas</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Abertura com música</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Kahoot</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Premiação</li>
+                            <li class="flex items-center"><span class="text-brandBlue mr-3 font-bold">✓</span> Coffee Break</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900 text-center mb-6">R$ 2.400,00</div>
+                        <a href="https://wa.me/5534991232294?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20pacote%20Premium%20para%20Escolas." target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 bg-brandBlue hover:bg-blue-600 text-white font-bold rounded-full transition-colors">
+                            <!-- Asset 9: wpicon.png -->
+                            <img src="wpicon.png" alt="WhatsApp" class="w-5 h-5 mr-2" onerror="this.style.display='none'">
+                            CONTRATAR
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">AVALIAÇÕES</h2>
+                <p class="text-gray-600">Veja o que dizem sobre mim.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Depoimento 1 (Asset 10: prof1.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-gray-600 italic mb-6">"Não sabia que o Geovanne era tão massa assim com os alunos. Foi uma palestra incrível cheia de emoções do início ao fim."</p>
+                    <div class="flex items-center space-x-4">
+                        <img src="prof1.png" alt="Tiago H." class="w-14 h-14 rounded-full object-cover border-2 border-brandBlue" onerror="this.outerHTML='<div class=\'w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold\'>TH</div>'">
+                        <div>
+                            <h4 class="font-bold text-gray-900">TIAGO H.</h4>
+                            <p class="text-sm text-gray-500">Diretor do Colégio Anchieta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 (Asset 11: prof2.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between card-hover transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-600 italic mb-6">"Uma apresentação incrível. Todas as escolas precisam ter essa experiência. A metodologia Zenkai é algo inovador."</p>
+                    <div class="flex items-center space-x-4">
+                        <img src="prof2.png" alt="Mauro R." class="w-14 h-14 rounded-full object-cover border-2 border-brandBlue" onerror="this.outerHTML='<div class=\'w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold\'>MR</div>'">
+                        <div>
+                            <h4 class="font-bold text-gray-900">MAURO R.</h4>
+                            <p class="text-sm text-gray-500">Diretor do Colégio Arma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 (Asset 12: prof3.png) -->
+                <div class="bg-brandLight p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-gray-600 italic mb-6">"Depois da palestra sobre as Redes Sociais nossos alunos nunca mais foram os mesmos."</p>
+                    <div class="flex items-center space-x-4">
+                        <img src="prof3.png" alt="Fernanda" class="w-14 h-14 rounded-full object-cover border-2 border-brandBlue" onerror="this.outerHTML='<div class=\'w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold\'>F</div>'">
+                        <div>
+                            <h4 class="font-bold text-gray-900">FERNANDA</h4>
+                            <p class="text-sm text-gray-500">Diretora da E.E. Col. Pe...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatos Section -->
+    <section id="contatos" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-brandBlue tracking-widest uppercase mb-2">Agende uma reunião</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">CONTRATAR</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Asset 9: wpicon.png -->
+                <a href="https://wa.me/5534991232294" target="_blank" class="flex flex-col items-center p-8 bg-white rounded-2xl hover:bg-green-50 transition-colors card-hover border border-gray-200" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600">
+                        <img src="wpicon.png" alt="WhatsApp" class="w-8 h-8" onerror="this.outerHTML='<span class=\'font-bold\'>W</span>'">
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">WhatsApp</h4>
+                    <p class="text-gray-600 text-center">(34) 99123-2294</p>
+                </a>
+                <!-- Asset 13: email.png -->
+                <a href="mailto:contato@gebruno.com.br" class="flex flex-col items-center p-8 bg-white rounded-2xl hover:bg-blue-50 transition-colors card-hover border border-gray-200" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-brandBlue">
+                        <img src="email.png" alt="Email" class="w-8 h-8" onerror="this.outerHTML='<span class=\'font-bold\'>@</span>'">
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">E-mail</h4>
+                    <p class="text-gray-600 text-center">contato@gebruno.com.br</p>
+                </a>
+                <!-- Asset 14: instagram.png -->
+                <a href="https://instagram.com/eu.gebruno" target="_blank" class="flex flex-col items-center p-8 bg-white rounded-2xl hover:bg-pink-50 transition-colors card-hover border border-gray-200" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4 text-pink-600">
+                        <img src="instagram.png" alt="Instagram" class="w-8 h-8" onerror="this.outerHTML='<span class=\'font-bold\'>IG</span>'">
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Instagram</h4>
+                    <p class="text-gray-600 text-center">@eu.gebruno</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkerBg text-gray-500 py-8 border-t border-gray-800 text-center">
+        <p>&copy; 2026 Geovanne Bruno. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-in-out-cubic',
+        });
+    </script>
+</body>
+</html>
