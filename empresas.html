@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin Selling - Empresas</title>
+  <!-- Fonte do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8faee;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Topo / Voltar */
+    .top-bar {
+      padding: 20px 0;
+    }
+
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #1e5bb8;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: transform 0.2s;
+    }
+
+    .btn-voltar img {
+      width: 24px;
+      height: auto;
+    }
+
+    .btn-voltar:hover {
+      transform: translateX(-5px);
+    }
+
+    /* Título Principal */
+    .hero-title {
+      text-align: center;
+      color: #1a56c4;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .hero-description {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 40px auto;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .hero-description strong {
+      color: #1a56c4;
+    }
+
+    /* Grid SPIN Selling (4 cards) */
+    .spin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 70px;
+    }
+
+    .spin-card {
+      background: #ffffff;
+      border: 2px solid #1a56c4;
+      border-radius: 16px;
+      padding: 25px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .spin-card-icon {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .spin-card-content h3 {
+      color: #1a56c4;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .spin-card-content p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Seções Genéricas */
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      color: #1a56c4;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-subtitle {
+      color: #666;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    /* Logos das Empresas */
+    .empresas-container {
+      margin-bottom: 80px;
+    }
+
+    .empresas-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .empresas-logos img {
+      max-width: 180px;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+
+    .empresas-logos img:hover {
+      filter: grayscale(0%);
+    }
+
+    /* Pacotes */
+    .pacotes-container {
+      margin-bottom: 80px;
+    }
+
+    .pacotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .pacote-card {
+      background: #ffffff;
+      border: 2px solid #1a56c4;
+      border-radius: 20px;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .pacote-card.highlight {
+      border-width: 3px;
+      transform: scale(1.03);
+    }
+
+    .pacote-title {
+      color: #1a56c4;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .pacote-features {
+      list-style: none;
+      margin-bottom: 25px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .pacote-features li {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .pacote-price {
+      color: #1a56c4;
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .btn-contratar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #1a56c4;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn-contratar img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-contratar:hover {
+      background-color: #123e91;
+      transform: translateY(-2px);
+    }
+
+    /* Avaliações */
+    .avaliacoes-container {
+      margin-bottom: 80px;
+    }
+
+    .avaliacoes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .avaliacao-card {
+      background: #ffffff;
+      border: 2px solid #1a56c4;
+      border-radius: 16px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .avaliacao-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #1a56c4;
+    }
+
+    .avaliacao-nome {
+      color: #1a56c4;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .avaliacao-cargo {
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .avaliacao-texto {
+      color: #555;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    /* Contato / Rodapé */
+    .contato-container {
+      background: #ffffff;
+      border: 2px solid #1a56c4;
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .contato-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .contato-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .contato-item img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .contato-item:hover {
+      color: #1a56c4;
+    }
+
+    @media (max-width: 768px) {
+      .pacote-card.highlight {
+        transform: none;
+      }
+      .contato-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Topo -->
+    <div class="top-bar">
+      <a href="index.html" class="btn-voltar">
+        <!-- Asset 1: seta.png -->
+        <img src="seta.png" alt="Seta Voltar">
+        VOLTAR PARA EMPRESAS
+      </a>
+    </div>
+
+    <!-- Título Principal -->
+    <h1 class="hero-title">SPIN SELLING</h1>
+    <p class="hero-description">
+      Palestra exclusiva para seu time de vendas, focado na principal técnica de vendas desenvolvida por Neil Rackham, <strong>Spin Selling</strong>. Essa metodologia traz orientações sobre quais são as perguntas certas de se fazer em um processo comercial para aumentar as taxas de vendas.
+    </p>
+
+    <!-- SPIN Grid -->
+    <div class="spin-grid">
+      <!-- Situação -->
+      <div class="spin-card">
+        <!-- Asset 2: icone1em.png -->
+        <img src="icone1em.png" alt="Situação" class="spin-card-icon">
+        <div class="spin-card-content">
+          <h3>SITUAÇÃO</h3>
+          <p>Entender o contexto atual, os processos e os fatos sobre o cliente.</p>
+        </div>
+      </div>
+
+      <!-- Problema -->
+      <div class="spin-card">
+        <!-- Asset 3: icone2em.png -->
+        <img src="icone2em.png" alt="Problema" class="spin-card-icon">
+        <div class="spin-card-content">
+          <h3>PROBLEMA</h3>
+          <p>Identificar dores, dificuldades e insatisfações com o cenário atual.</p>
+        </div>
+      </div>
+
+      <!-- Implicação -->
+      <div class="spin-card">
+        <!-- Asset 4: icone3em.png -->
+        <img src="icone3em.png" alt="Implicação" class="spin-card-icon">
+        <div class="spin-card-content">
+          <h3>IMPLICAÇÃO</h3>
+          <p>Ampliar a percepção do impacto e as consequências negativas do problema.</p>
+        </div>
+      </div>
+
+      <!-- Necessidade -->
+      <div class="spin-card">
+        <!-- Asset 5: icone4em.png -->
+        <img src="icone4em.png" alt="Necessidade" class="spin-card-icon">
+        <div class="spin-card-content">
+          <h3>NECESSIDADE</h3>
+          <p>Fazer o cliente verbalizar o valor e os benefícios de resolver o problema.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção Empresas -->
+    <section class="empresas-container">
+      <div class="section-header">
+        <h2 class="section-title">EMPRESAS</h2>
+        <p class="section-subtitle">Conheça as empresas que já investiram.</p>
+      </div>
+      <div class="empresas-logos">
+        <!-- Asset 6: empresa1.png -->
+        <img src="empresa1.png" alt="Rio Branco">
+        <!-- Asset 7: empresa2.png -->
+        <img src="empresa2.png" alt="Eletro Fonte">
+        <!-- Asset 8: empresa3.png -->
+        <img src="empresa3.png" alt="Uniube">
+      </div>
+    </section>
+
+    <!-- Seção Pacotes -->
+    <section class="pacotes-container">
+      <div class="section-header">
+        <h2 class="section-title">PACOTES</h2>
+        <p class="section-subtitle">Escolha a melhor oferta!</p>
+      </div>
+
+      <div class="pacotes-grid">
+        <!-- Básico -->
+        <div class="pacote-card">
+          <h3 class="pacote-title">BÁSICO</h3>
+          <ul class="pacote-features">
+            <li>2h de palestra</li>
+            <li>Plantão de dúvidas</li>
+          </ul>
+          <div class="pacote-price">R$ 900,00</div>
+          <a href="https://wa.me/5534991232294" target="_blank" class="btn-contratar">
+            <!-- Asset 9: wpicon.png -->
+            <img src="wpicon.png" alt="WhatsApp">
+            CONTRATAR
+          </a>
+        </div>
+
+        <!-- Premium -->
+        <div class="pacote-card highlight">
+          <h3 class="pacote-title">PREMIUM</h3>
+          <ul class="pacote-features">
+            <li>2h de palestra</li>
+            <li>Plantão de dúvidas</li>
+            <li>Abertura com música</li>
+            <li>Roleplay</li>
+            <li>Premiação</li>
+            <li>Coffe Break</li>
+          </ul>
+          <div class="pacote-price">R$ 2.700,00</div>
+          <a href="https://wa.me/5534991232294" target="_blank" class="btn-contratar">
+            <!-- Asset 9: wpicon.png -->
+            <img src="wpicon.png" alt="WhatsApp">
+            CONTRATAR
+          </a>
+        </div>
+
+        <!-- Avançado -->
+        <div class="pacote-card">
+          <h3 class="pacote-title">AVANÇADO</h3>
+          <ul class="pacote-features">
+            <li>2h de palestra</li>
+            <li>Plantão de dúvidas</li>
+            <li>Abertura com música</li>
+            <li>Roleplay</li>
+          </ul>
+          <div class="pacote-price">R$ 1.800,00</div>
+          <a href="https://wa.me/5534991232294" target="_blank" class="btn-contratar">
+            <!-- Asset 9: wpicon.png -->
+            <img src="wpicon.png" alt="WhatsApp">
+            CONTRATAR
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Avaliações -->
+    <section class="avaliacoes-container">
+      <div class="section-header">
+        <h2 class="section-title">AVALIAÇÕES</h2>
+        <p class="section-subtitle">Veja o que dizem sobre mim.</p>
+      </div>
+
+      <div class="avaliacoes-grid">
+        <!-- Avaliação 1 -->
+        <div class="avaliacao-card">
+          <!-- Asset 10: rh1.png -->
+          <img src="rh1.png" alt="Henrico D." class="avaliacao-avatar">
+          <div class="avaliacao-nome">HENRICO D.</div>
+          <div class="avaliacao-cargo">CEO da Agro Business</div>
+          <p class="avaliacao-texto">"A técnica do SPIN Selling aplicada a prática mudou completamente a mentalidade do meu time de vendas."</p>
+        </div>
+
+        <!-- Avaliação 2 -->
+        <div class="avaliacao-card">
+          <!-- Asset 11: rh2.png -->
+          <img src="rh2.png" alt="Roberta C." class="avaliacao-avatar">
+          <div class="avaliacao-nome">ROBERTA C.</div>
+          <div class="avaliacao-cargo">Líder Construções</div>
+          <p class="avaliacao-texto">"Meu time de vendas nunca mais foi o mesmo após este treinamento. Sou eternamente grata por esta palestra maravilhosa."</p>
+        </div>
+
+        <!-- Avaliação 3 -->
+        <div class="avaliacao-card">
+          <!-- Asset 12: rh3.png -->
+          <img src="rh3.png" alt="Carlos S." class="avaliacao-avatar">
+          <div class="avaliacao-nome">CARLOS S.</div>
+          <div class="avaliacao-cargo">Fundador de Logistics Silver</div>
+          <p class="avaliacao-texto">"Acredito que todas as empresas deveriam aderir ao treinamento dos seus times pelo menos 1 vez ao ano. Faz toda diferença!"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contratar / Rodapé -->
+    <section class="contato-container">
+      <h2 class="section-title">CONTRATAR</h2>
+      <p class="section-subtitle">Agende uma reunião</p>
+
+      <div class="contato-grid">
+        <!-- WhatsApp (Asset 9: wpicon.png) -->
+        <a href="https://wa.me/5534991232294" target="_blank" class="contato-item">
+          <img src="wpicon.png" alt="WhatsApp">
+          <span>(34) 99123-2294</span>
+        </a>
+
+        <!-- E-mail (Asset 13: email.png) -->
+        <a href="mailto:contato@gebruno.com.br" class="contato-item">
+          <img src="email.png" alt="E-mail">
+          <span>contato@gebruno.com.br</span>
+        </a>
+
+        <!-- Instagram (Asset 14: instagram.png) -->
+        <a href="https://instagram.com/eu.gegebruno" target="_blank" class="contato-item">
+          <img src="instagram.png" alt="Instagram">
+          <span>@eu.gegebruno</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
